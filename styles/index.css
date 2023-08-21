@@ -338,12 +338,17 @@ h2.title {
     margin-bottom: 0rem;
     font-size: 0.5rem;
   }
+
+  iconify-icon {
+    font-size: 14px;
+  }
+  
+  #yields iconify-icon {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-
-
-
   .header p {
     max-width: 21.5625rem;
     font-size: 0.75rem;
@@ -358,7 +363,7 @@ h2.title {
     gap: 1.5rem 1.3rem;
   }
 
-  .main aside.card div#yields{
+  .main aside.card div#yields {
     order: 4;
   }
 }
