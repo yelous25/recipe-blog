@@ -1,2 +1,364 @@
 @import './_reset.css';
 @import './_base.css';
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: 'Playfair Display Italic';
+  src: url('/assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+:root {
+  --gray-1: #333;
+  --gray-2: #4f4f4f;
+  --gray-3: #828282;
+  --gray-4: #bdbdbd;
+  --orange: #f2994a;
+
+  color: var(--gray-1);
+  font-style: normal;
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+iconify-icon {
+  font-size: 1.75rem;
+  color: var(--gray-2);
+}
+
+#yields iconify-icon {
+  font-size: 1.875rem;
+  color: var(--orange);
+}
+
+body {
+  margin: 0 0.75rem;
+  max-width: 60.5625rem;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  line-height: normal;
+}
+
+.header {
+  margin: 3.25rem 0 2.6875rem 0;
+}
+
+.title {
+  width: fit-content;
+  height: fit-content;
+  color: #000;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  line-height: normal;
+}
+
+.main-title {
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+}
+
+h2.title {
+  font-size: 24px;
+}
+
+.ingredient-container h2.title {
+  margin-bottom: 2rem;
+}
+
+.sub-title {
+  width: fit-content;
+  height: fit-content;
+  font-family: 'Playfair Display Italic';
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: normal;
+}
+
+.header p::before {
+  content: url('/assets/6dots.svg');
+  margin-right: 0.75rem;
+}
+
+.header p {
+  max-width: 38.5625rem;
+  display: inline-flex;
+  color: var(--gray-2);
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+.cake-picture {
+  max-width: 100%;
+}
+
+.main {
+  margin: 3rem 0 5.8125rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main section {
+  order: 1;
+}
+
+.main section strong {
+  font-weight: 700;
+}
+
+#graham-cracker-crust {
+  margin-bottom: 1.875rem;
+}
+
+#cheesecake {
+  margin: 2.375rem 0 2.25rem 0;
+}
+
+.main section li {
+  display: flex;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.ingredient,
+.instruction {
+  max-width: 36.3125rem;
+}
+
+.main .ingredient-container ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+.main .ingredient-container ul li::before {
+  content: '';
+  margin-right: 1.0625rem;
+  width: 1.3125rem;
+  height: 1.3125rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--gray-3);
+  box-sizing: border-box;
+}
+
+.main .ingredient-container ul em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.main .instruction-container h2.title {
+  margin: 1.75rem 0 1.75rem 0;
+}
+
+.main .instruction-container ol {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.main .instruction-container ol .olCounter {
+  margin-right: 1.0625rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--orange);
+  border-radius: 0.375rem;
+  box-sizing: border-box;
+  background: var(--orange);
+}
+
+.olCounter span {
+  height: 100%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display';
+  line-height: 1;
+}
+
+.main .source {
+  margin-top: 3.5625rem;
+  color: var(--gray-4);
+  font-size: 16px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  word-wrap: break-word;
+}
+
+.main aside.card {
+  order: 2;
+  margin-left: 0.75rem;
+  min-width: 13.5rem;
+  height: 22.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.625rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.main aside.card div {
+  margin-left: 2.5rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.main aside.card div#yields span {
+  color: var(--orange);
+}
+
+.main aside.card div p {
+  margin-left: 0.6875rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--gray-1);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.main aside.card div p em {
+  margin-bottom: 0.25rem;
+  color: var(--gray-4);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer {
+  margin: auto auto 1.5rem auto;
+  align-self: center;
+  color: var(--gray-3);
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.footer #username {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin: 2rem 0 1.4375rem 0;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  h2.title {
+    font-size: 1.125rem;
+  }
+
+  .ingredient-container h2.title {
+    margin-bottom: 2rem;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+  }
+
+  .header p {
+    max-width: 28rem;
+    font-size: 0.75rem;
+  }
+
+  .main {
+    margin: 1.5rem 0 8.0625rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #graham-cracker-crust {
+    margin-bottom: 1.5rem;
+  }
+
+  #cheesecake {
+    margin: 2.625rem 0 1.5rem 0;
+  }
+
+  .main .ingredient-container ul {
+    row-gap: 0.625rem;
+    font-size: 0.875rem;
+  }
+
+  .main .ingredient-container ul li::before {
+    margin-right: 0.5rem;
+  }
+
+  .main .instruction-container ol .olCounter {
+    margin-right: 0.9375rem;
+  }
+
+  .main .source {
+    font-size: 12px;
+  }
+
+  .main aside.card {
+    order: -1;
+    margin: 0 0 1.875rem 0;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    box-shadow: 0px 0px 0px 0px white;
+  }
+
+  .main aside.card div {
+    margin-left: 0rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  .main aside.card div p {
+    margin-left: 0.25rem;
+    font-size: 0.625rem;
+  }
+
+  .main aside.card div p em {
+    margin-bottom: 0rem;
+    font-size: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+
+
+  .header p {
+    max-width: 21.5625rem;
+    font-size: 0.75rem;
+  }
+
+  .main aside.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+    gap: 1.5rem 1.3rem;
+  }
+
+  .main aside.card div#yields{
+    order: 4;
+  }
+}
