@@ -37,6 +37,11 @@ iconify-icon {
   color: var(--orange);
 }
 
+html {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   margin: 0 0.75rem;
   max-width: 60.5625rem;
@@ -241,7 +246,8 @@ h2.title {
 }
 
 .footer {
-  margin: auto auto 1.5rem auto;
+  margin: 0 auto 1.5rem auto;
+  justify-self: flex-end;
   align-self: center;
   color: var(--gray-3);
   font-size: 14px;
@@ -251,6 +257,7 @@ h2.title {
 
 .footer #username {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
